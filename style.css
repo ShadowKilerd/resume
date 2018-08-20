@@ -1,1 +1,17 @@
 /*style should be here*/
+
+header, section {
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+h1, h2, h3, p {
+    background-color: rgba(200, 200, 0, 0.1);
+}
+
+span, strong {
+    background-color: rgba(200, 0, 200, 0.1);
+}
+
+div {
+    border: 1px solid #CCCCCC;
+}
