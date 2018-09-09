@@ -1,17 +1,83 @@
-/*style should be here*/
 
-header, section {
-    background-color: rgba(200, 200, 200, 0.1);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1, h2, h3, p {
-    background-color: rgba(200, 200, 0, 0.1);
+html {
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-span, strong {
-    background-color: rgba(200, 0, 200, 0.1);
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    align-items: center;
 }
 
-div {
-    border: 1px solid #CCCCCC;
+p {
+    line-height: 1.5rem;
+}
+
+img.avatar {
+    border-radius: 3px;
+}
+
+header {
+    max-width: 900px;
+    z-index: 999;
+    margin-top: 3rem;
+}
+main {
+    background-color: #fff;
+    max-width: 900px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: -5rem 0 5rem;
+    padding: 8rem 3rem 3rem;
+
+}
+
+
+section.base-info {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 3px double #ededed;
+}
+
+h2.sub-header {
+    color: #EC7263;
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    margin: .5rem;
+}
+
+p.year {
+    font-weight: 700;
+    position: relative;
+}
+
+p.year:after{
+    content: " ";
+    display: inline-block;
+    border-left: 3px solid #EC7263;
+    height: 40px;
+    width: 10px;
+    position: absolute;
+    left: 1rem;
+    top: 2rem;
+}
+
+section.infor {
+    margin: 0 0 0 3rem;
+    background-color: #eee;
+    padding: .5rem;
+    border-radius: 3px;
 }
