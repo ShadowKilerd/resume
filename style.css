@@ -221,6 +221,7 @@ section.skill div.percentage {
     overflow: hidden;
     text-overflow:ellipsis;
     white-space: nowrap;
+    border-radius: 3px;
 
 }
 
@@ -302,6 +303,7 @@ div.hobby {
     margin: .5rem;
     display: flex;
     align-items: center;
+    border-radius: 3px;
 }
 
 div.hobby i{
