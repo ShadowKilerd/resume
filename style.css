@@ -4,6 +4,56 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?ihduwu');
+    src:  url('fonts/icomoon.eot?ihduwu#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?ihduwu') format('truetype'),
+      url('fonts/icomoon.woff?ihduwu') format('woff'),
+      url('fonts/icomoon.svg?ihduwu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-phone:before {
+    content: "\e942";
+  }
+  .icon-envelop:before {
+    content: "\e945";
+  }
+  .icon-star-full:before {
+    content: "\e9d9";
+  }
+  .icon-heart:before {
+    content: "\e9da";
+  }
+  .icon-facebook:before {
+    content: "\ea90";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-skype:before {
+    content: "\eac5";
+  }
+  
+  
+  
 
 html {
     font-size: 14px;
@@ -26,13 +76,13 @@ img.avatar {
 }
 
 header {
-    max-width: 900px;
+    max-width: 1280px;
     z-index: 999;
     margin-top: 3rem;
 }
 main {
     background-color: #fff;
-    max-width: 900px;
+    max-width: 1280px;
     border: 1px solid #ddd;
     border-radius: 3px;
     margin: -5rem 0 5rem;
@@ -51,6 +101,11 @@ h2.sub-header {
     color: #EC7263;
     font-size: 1.25rem;
     margin: 1rem 0;
+    text-transform: uppercase
+}
+h2.sub-header::before {
+    content: "//";
+    margin-right: .5rem;
 }
 
 li {
@@ -59,7 +114,7 @@ li {
     margin: .5rem;
 }
 
-p.year {
+section.education p.year {
     font-weight: 700;
     position: relative;
 }
@@ -78,6 +133,177 @@ p.year:after{
 section.infor {
     margin: 0 0 0 3rem;
     background-color: #eee;
-    padding: .5rem;
+    padding: .5rem 1rem;
     border-radius: 3px;
+    position: relative;
+}
+section.infor::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: .5rem solid transparent;
+    border-right: .75rem solid #eee;
+    border-bottom: .5rem solid transparent;
+    top: 1rem;
+    left: -.75rem;
+}
+
+section.with-side {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+section.main {
+    flex: 0 0 70%;
+}
+
+section.with-side > aside {
+    flex: 0 0 30%;
+    margin-left: 2rem;
+}
+
+section.experience section.line {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+}
+
+section.experience section.line .company {
+    flex: 0 0 20%
+}
+
+section.experience section.line p.year {
+    color: #999;
+}
+
+section.experience section.line p {
+    color: #555;
+}
+
+section.contact div.one {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+section.contact i {
+    font-size: 1.5rem;
+    color: #ddd;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    padding: .75rem;
+}
+
+section.contact div.one:last-child i {
+
+    border-bottom: none
+
+}
+
+section.contact div.info {
+    margin-left: 1rem;
+}
+
+section.contact div.info p {
+    color: #555;
+    font-size: .75rem;
+}
+
+section.skill div.percentage {
+    width: 0;
+    display: block;
+    background-color: #EC7263;
+    color: #fff;
+    padding: .5rem;
+    margin: .5rem 0;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+
+}
+
+section.skill section.footer {
+    display: flex;
+    align-content: space-between;
+    color: #ddd;
+    border-top: 2px solid #ddd;
+    margin: .5rem 0;
+
+    flex-direction: row;
+    justify-content: space-between;
+}
+section.skill section.footer div.name {
+    position: relative;
+}
+
+.position-left:before {
+    left: 0;
+}
+.position-middle:before {
+    left: 50%;
+}
+.position-right:before {
+    right: 0;
+}
+
+
+section.skill section.footer div.name p:before{
+    width: 2px;
+    height: 5px;
+    position: absolute;
+    content: ' ';
+    display: block;
+    background: #ddd;
+    top: 0;
+
+}
+section.skill section.footer div.name p{
+    margin-top: .5rem
+}
+
+
+section.language li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .75rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+section.language li i{
+    color: #ddd;
+}
+section.language li[data-star="1"] i:nth-child(-n+1){
+    color: red;
+}
+section.language li[data-star="2"] i:nth-child(-n+2){
+    color: red;
+}
+section.language li[data-star="3"] i:nth-child(-n+3){
+    color: red;
+}
+section.language li[data-star="4"] i:nth-child(-n+4){
+    color: red;
+}
+section.language li[data-star="5"] i:nth-child(-n+5){
+    color: red;
+}
+
+section.hobbies section.container{
+    display: flex;
+    flex-direction: row;
+}
+div.hobby {
+    color: #fff;
+    background-color: #A75265;
+    padding: .5rem;
+    margin: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+div.hobby i{
+    margin-right: .5rem
 }
